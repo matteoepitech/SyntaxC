@@ -18,10 +18,17 @@
  */
 int main(int argc, char *argv[])
 {
+    syntaxc_t *syntax = NULL;
+    token_t *head = NULL;
+
     if (argc <= 1) {
         fprintf(stderr, "Err: You didn't put any file!\n");
         return KO_OUTPUT;
     }
+    syntax = open_file(argv[1]);
+    if (syntax == NULL)
+        return KO_OUTPUT;
     printf("Syntax for: " ANSI_COLOR_GREEN "%s\n" ANSI_COLOR_RESET, argv[1]);
-    return OK_OUTPUT;
+    head = tokenize_buffer(syntax);
+    return print_tokens(head);
 }
