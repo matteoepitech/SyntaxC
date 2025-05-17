@@ -1,0 +1,6 @@
+*.log
+*.o
+
+.cache
+syntaxc
+compile_commands.json

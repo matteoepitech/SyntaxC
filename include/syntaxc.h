@@ -6,6 +6,9 @@
 */
 
 #ifndef SYNTAXC_H_
+    
+    #include <stdio.h>
+    
     #define SYNTAXC_H_
 
     #define OK_OUTPUT 0
