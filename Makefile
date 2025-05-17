@@ -14,7 +14,7 @@ SRC		:= $(shell find src -name "*.c")
 OBJ		:= $(SRC:.c=.o)
 NAME		:= syntaxc
 COMPIL		:= gcc
-CFLAGS		:= -Wall -Wextra -Werror -Wpedantic -I./include/
+CFLAGS		:= -Wall -Wextra -Werror -Wpedantic -I./include/ -g
 
 all: $(NAME)
 

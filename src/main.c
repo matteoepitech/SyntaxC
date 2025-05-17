@@ -16,7 +16,8 @@
  *
  * @return Return status.
  */
-int main(int argc, char *argv[])
+int
+main(int argc, char *argv[])
 {
     syntaxc_t *syntax = NULL;
     token_t *head = NULL;
@@ -30,5 +31,6 @@ int main(int argc, char *argv[])
         return KO_OUTPUT;
     printf("Syntax for: " ANSI_COLOR_GREEN "%s\n" ANSI_COLOR_RESET, argv[1]);
     head = tokenize_buffer(syntax);
-    return print_tokens(head);
+    print_tokens(head);
+    return print_final_file(head);
 }

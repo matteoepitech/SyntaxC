@@ -36,6 +36,30 @@ typedef enum {
     TOKEN_SYMBOL,
     TOKEN_NUMBER,
     TOKEN_STRING,
+    TOKEN_SPACE,
+    TOKEN_TAB,
+    TOKEN_NEWLINE,
+    TOKEN_COMMENT_BIG,
+    TOKEN_COMMENT_SMALL,
+    TOKEN_PREPROCESSOR,
+    TOKEN_PARENT_OPEN,
+    TOKEN_PARENT_CLOSE,
+    TOKEN_BRACKET_OPEN,
+    TOKEN_BRACKET_CLOSE,
+    TOKEN_SUPERIOR,
+    TOKEN_INFERIOR,
+    TOKEN_EQUAL,
+    TOKEN_SEMICOLON,
+    TOKEN_SQUARE_BRACKET_OPEN,
+    TOKEN_SQUARE_BRACKET_CLOSE,
+    TOKEN_COMMA,
+    TOKEN_STAR,
+    TOKEN_ADD,
+    TOKEN_DIV,
+    TOKEN_SUB,
+    TOKEN_CHAR,
+    TOKEN_AND,
+    TOKEN_OR,
     TOKEN_END
 } token_type_t;
 
@@ -62,9 +86,15 @@ syntaxc_t *open_file(char *file);
 token_t *tokenize_buffer(syntaxc_t *syntax);
 token_t *create_token(const char *start, size_t length, size_t line, size_t col, token_type_t type);
 
+int is_start_comment_big(const char *string);
+int is_start_comment_small(const char *string);
+int is_end_comment_big(const char *string);
+int is_end_comment_small(const char *string);
+
 /*
  * Folder : src/printer/
  */
 int print_tokens(token_t *head);
+int print_final_file(token_t *head);
 
 #endif /* ifndef SYNTAXC_H_ */
