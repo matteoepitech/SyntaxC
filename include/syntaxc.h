@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** include/syntaxc
 ** File description:
 ** SyntaxC Header file

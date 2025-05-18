@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** src/file/open_file
 ** File description:
 ** Open the file and fill the structure

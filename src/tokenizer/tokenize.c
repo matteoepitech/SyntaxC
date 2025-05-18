@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** src/tokenizer/tokenize
 ** File description:
 ** Tokenize the buffer and return a token list

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** src/printer/print_tokens
 ** File description:
 ** Print of tokens

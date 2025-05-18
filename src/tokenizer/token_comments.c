@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** src/tokenizer/tokens_utils
 ** File description:
 ** This file contains some functions inline to check some things in tokens

@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2025
+** DEL PROJECT, 2025
 ** src/tokenizer/tokens_helper
 ** File description:
 ** Tokens helper
