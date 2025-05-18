@@ -17,5 +17,5 @@ make fclean # clean everything
 make re     # rebuild from scratch
 ```
 
-> [!INFO]
+> [!NOTE]
 > This project use a tokenizer/lexer to make this works. There is no real LSP.
