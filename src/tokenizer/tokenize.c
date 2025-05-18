@@ -323,5 +323,5 @@ tokenize_buffer(syntaxc_t *syntax)
         }
         syntax->_current_index++;
     }
-    return head;
+    return transform_identifier(head);
 }

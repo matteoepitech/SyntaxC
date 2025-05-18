@@ -6,7 +6,6 @@
 */
 
 #include "syntaxc.h"
-#include "ansi_colors.h"
 
 /**
  * @brief Main function.
@@ -29,8 +28,10 @@ main(int argc, char *argv[])
     syntax = open_file(argv[1]);
     if (syntax == NULL)
         return KO_OUTPUT;
-    printf("Syntax for: " ANSI_COLOR_GREEN "%s\n" ANSI_COLOR_RESET, argv[1]);
     head = tokenize_buffer(syntax);
-    print_tokens(head);
-    return print_final_file(head);
+    print_final_file(head);
+    free_tokens(head);
+    free(syntax->_buffer_file);
+    free(syntax);
+    return OK_OUTPUT;
 }

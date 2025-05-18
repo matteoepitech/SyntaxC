@@ -33,3 +33,21 @@ create_token(const char *start, size_t length, size_t line, size_t col, token_ty
     token->_next_token = NULL;
     return token;
 }
+
+/**
+ * @brief Free tokens.
+ *
+ * @param head          The HEAD
+ */
+void
+free_tokens(token_t *head)
+{
+    token_t *current = head;
+    token_t *next = NULL;
+    
+    while (current != NULL) {
+        next = current->_next_token;
+        free(current);
+        current = next;
+    }
+}

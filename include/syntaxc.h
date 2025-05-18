@@ -11,6 +11,7 @@
     #include <stdio.h>
     #include <stddef.h>
     #include <stdlib.h>
+    #include <string.h>
     #include <ctype.h>
     
     #define SYNTAXC_H_
@@ -60,6 +61,7 @@ typedef enum {
     TOKEN_CHAR,
     TOKEN_AND,
     TOKEN_OR,
+    TOKEN_FUNC,
     TOKEN_END
 } token_type_t;
 
@@ -85,6 +87,10 @@ syntaxc_t *open_file(char *file);
  */
 token_t *tokenize_buffer(syntaxc_t *syntax);
 token_t *create_token(const char *start, size_t length, size_t line, size_t col, token_type_t type);
+token_t *transform_identifier(token_t *head);
+token_t *transform_function(token_t *head);
+
+void free_tokens(token_t *head);
 
 int is_start_comment_big(const char *string);
 int is_start_comment_small(const char *string);
